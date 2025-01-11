@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+a {
+  color: #1f61db;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0d3379;
+}
+
+.apply_link {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  background: #1f61db;
+  color: #FFF;
+}
+
+.apply_link:hover {
+  background: #2670f8;
+}
+
+.camp_name {
+  font-weight: 900;
+}
+
+.application_info {
+  padding-left: 1rem;
+  border-left: #ddd 0.1rem dashed;
+}
+
+.camp_listing {
+  border-radius: 1rem;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #1a4926;
+  width: 100vw;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.input_holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.end_query_button {
+  background: #1a4926;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border: rgba(0, 0, 0, 0.5) 1px solid;
+  border-radius: 0 0.4rem 0.4rem 0;
+  color: white;
+}
+
+.header>div>input {
+  background: #1a4926;
+  border: rgba(0, 0, 0, 0.5) 1px solid;
+  border-right: 0;
+  border-radius: 0.4rem 0 0 0.4rem;
+  padding: 0.4rem 0.8rem;
+  width: max(calc(20vw - 1rem), 15rem);
+  transition: background-color 0.3s ease;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.header>div>input:hover {
+  background: #1c522a;
+}
+
+.end_query_button:hover {
+  background: #1c522a;
+}
+
+.header>div>input:focus {
+  background: #236835;
+  outline: none;
+}
+
+.home {
+  margin: 4rem 1rem;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .camp_listing {
+    flex-basis: 100%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .camp_listing {
+    flex-basis: calc(50% - 0.5rem);
+  }
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.specialization_hook {
+  color: #12421e;
+  --rightColor: #FFF;
+  --leftColor: #FFF;
+  background-image: linear-gradient(to right, var(--leftColor), var(--rightColor));
+  transition: --rightColor 0.2s ease, --leftColor 0.2s ease;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: rgba(0, 0, 0, 0.2) dashed 1px;
+}
+
+.specialization_hook>span {
+  text-align: left;
+}
+
+@property --rightColor {
+  syntax: '<color>';
+  initial-value: #fff;
+  inherits: false;
+}
+
+@property --leftColor {
+  syntax: '<color>';
+  initial-value: #fff;
+  inherits: false;
+}
+
+.specialization_hook:hover {
+  --rightColor: #a1caa1;
+  --leftColor: #eff3f0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.specialization_hook.active {
+  --rightColor: #a1caa1;
+  --leftColor: #a1caa1;
+}
+
+.specialization_hook.active:hover {
+  --rightColor: #80ac80;
+  --leftColor: #80ac80;
+
+}
+
+.specialization_text {
+  display: grid;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.specialization_text>div {
+  overflow: hidden;
+}
+
+.specialization_text.inactive {
+  grid-template-rows: 0fr;
+}
+
+.specialization_text.active {
+  grid-template-rows: 1fr;
+}
+
+ul {
+  margin: 0;
+}
+
+.no_results {
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/style-58e387ffb54ed472.css" integrity="sha384&#x2D;EZVFhf3BiGL9n3aeBawUWRh5zeiKkC2lWQVM1L2aR7IX5zOgaVeJliZ01wEsZVii"/>
+        <meta charset="utf-8" />
+        <title>Summer Camp Browser</title>
+    <link rel="modulepreload" href="/summercamps-c669d9b298a0ce4a.js" crossorigin=anonymous integrity="sha384-GuoAaoTBagx/HesEpwcd/z7u1aLE55uA63Q+OOM+DqP/OjjgROFDcsFpdRsfyclH"><link rel="preload" href="/summercamps-c669d9b298a0ce4a_bg.wasm" crossorigin=anonymous integrity="sha384-M6zQ91vN+tXhTnL9UNfXQ7oHEVAxgskb6yqyjGOc7Dxjlj37Ok+Fec4+k0mJlqDt" as="fetch" type="application/wasm"></head>
+    <body>
+<script type="module" nonce="XWQi3BsYDIkxt5VdfI4h9Q==">
+import init, * as bindings from '/summercamps-c669d9b298a0ce4a.js';
+const wasm = await init({ module_or_path: '/summercamps-c669d9b298a0ce4a_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
