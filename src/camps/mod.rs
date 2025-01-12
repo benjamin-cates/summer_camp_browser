@@ -1,26 +1,21 @@
 use crate::structs::SummerCamp;
 
-mod epic;
-mod csssa;
-mod cosmos;
+mod california;
+mod east_coast;
 pub mod generators;
-mod ucsb_research;
-mod yygs;
-mod boston_university;
-mod usc;
+mod ivy;
+mod midwest;
+mod northwest;
+mod south;
+mod template;
 
 pub fn all_camps() -> Vec<SummerCamp> {
     // Temporary list
     // SSP
-    // UCI Brain camp
     // Anson Clark Scholars Program
     // Stanford Summer Humanities institute
-    // UCI Ethics
     // Interlochen
     // UCLA Summer art camp
-    // Georgetown hoya
-    // 
-    // https://education.ucdavis.edu/ysp-application
     // https://belinblank.education.uiowa.edu/students/sstp/
     // https://www.stonybrook.edu/commcms/garcia/summer_program/apply
     // https://www.mathcamp.org/admission/
@@ -47,19 +42,12 @@ pub fn all_camps() -> Vec<SummerCamp> {
     // https://hai.stanford.edu/stanford-ai4all
     // https://psjp.princeton.edu
     // https://universitycollege.tufts.edu/pre-college/browse/adventures-veterinary-medicine
-    // https://vet.uga.edu/education/k-12-programs/vetcamp/
-    // https://cals.ncsu.edu/vetpac/vetcamp/
-    // https://education.ucdavis.edu/ysp-application
-    let mut out = vec![
-        epic::get_epic(),
-        csssa::get_csssa(),
-        yygs::get_yygs(),
-        //ucsb_research::get_rmp(),
-        ucsb_research::get_sra(),
-        usc::get_usc_precollege(),
-    ];
-    // Todo: Get cosmos essays
-    out.extend(cosmos::get_cosmos());
-    out.extend(boston_university::get_bu());
+    let mut out = vec![];
+    out.extend(california::get());
+    out.extend(east_coast::get());
+    out.extend(ivy::get());
+    out.extend(midwest::get());
+    out.extend(northwest::get());
+    out.extend(south::get());
     out
 }

@@ -1,4 +1,5 @@
-use super::{super::structs::*, generators::make_specializations};
+use crate::{camps::generators::make_specializations, structs::{Limit, Requirement, SummerCamp}};
+
 
 pub fn get_yygs() -> SummerCamp {
     SummerCamp {

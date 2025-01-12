@@ -1,8 +1,8 @@
 use crate::structs::{Limit, Requirement, SummerCamp};
 
-use super::generators::make_specializations;
+use super::super::generators::make_specializations;
 
-pub fn get_bu() -> impl Iterator<Item = SummerCamp> {
+pub fn get_all() -> impl Iterator<Item = SummerCamp> {
     let bu_aim = SummerCamp {
         acceptance_rate: None,
         link: Some("https://www.bu.edu/summer/high-school-programs/academic-immersion/"),

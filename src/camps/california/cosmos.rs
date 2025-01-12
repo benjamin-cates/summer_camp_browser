@@ -1,6 +1,6 @@
 use crate::structs::{Limit, Requirement, SummerCamp};
 
-use super::generators::{make_specializations};
+use super::super::generators::{make_specializations};
 
 pub(crate) fn get_cosmos() -> impl Iterator<Item = SummerCamp> {
     let cosmos_default = SummerCamp {

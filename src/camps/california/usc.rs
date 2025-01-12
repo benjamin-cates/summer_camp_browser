@@ -1,11 +1,11 @@
 use crate::structs::{Limit, Requirement, SummerCamp};
 
-use super::generators::make_specializations;
+use super::super::generators::make_specializations;
 
 pub fn get_usc_precollege() -> SummerCamp {
     SummerCamp {
         acceptance_rate: None,
-        link: Some("https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/"),
+        link: Some("https://precollege.usc.edu/summer-programs/"),
         description: vec![
             "USC’s four-week college immersion program provides high school students like you \
              with university experience in a subject area of their choice. Courses are \

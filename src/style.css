@@ -196,7 +196,8 @@ strong {
 
 .specialization_text {
   display: grid;
-  transition: grid-template-rows 0.3s ease;
+  transition: grid-template-rows 0.3s ease, padding-bottom 0.3s ease;
+    box-sizing: border-box;
 }
 
 .specialization_text>div {
@@ -204,10 +205,12 @@ strong {
 }
 
 .specialization_text.inactive {
+  padding-bottom: 0rem;
   grid-template-rows: 0fr;
 }
 
 .specialization_text.active {
+  padding-bottom: 1rem;
   grid-template-rows: 1fr;
 }
 

@@ -34,7 +34,7 @@ pub fn Specialization(props: &SpecProps) -> Html {
                         <p class="info">{"Links: "}{props.sc.link}</p>
                     }
                     if props.sc.length_wk.is_some() {
-                        <p class="info">{"Duration: "}{props.sc.length_wk}</p>
+                        <p class="info">{"Duration: "}{props.sc.length_wk}{" week"}{if props.sc.length_wk == Some(1.0) {""} else {"s"}}</p>
                     }
                     {props.sc.description.iter().map(|val| {html! {<p class={classes!("info", "description")}>{val}</p>}}).collect::<Html>()}
                     if props.sc.requirements.len() != 0 {
@@ -99,6 +99,9 @@ pub fn CampPage(props: &CampProps) -> Html {
                 }
                 if let Some(application_opens) = sc.application_opens {
                     <li class="info">{"Application opens on "}{application_opens}</li>
+                }
+                if let Some(length_wk) = sc.length_wk {
+                    <p class="info">{"Duration: "}{length_wk}{" week"}{if length_wk == 1.0 {""} else {"s"}}</p>
                 }
                 if let Some(acceptance_rate) = sc.acceptance_rate {
                     <li class="info">{"Acceptance rate: "}{acceptance_rate}{"%"}</li>
