@@ -36,7 +36,7 @@ pub fn georgetown_academies() -> SummerCamp {
              awarded after home presentations are completed.",
         ],
         deadline: Some("1/31/25"),
-        identifier: "UC Davis Young Scholars Program (YSP)",
+        identifier: "Georgetown Summer Academies",
         length_wk: Some(6.0),
         requirements: vec![
             Requirement::RequiredEssay(

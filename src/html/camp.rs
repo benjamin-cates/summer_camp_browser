@@ -27,11 +27,11 @@ pub fn Specialization(props: &SpecProps) -> Html {
     };
     html! {
         <div class={"specialization"}>
-            <button onclick={onclick} class={classes!(if *clicked {"active"} else {"inactive"}, "specialization_hook")}><span>{&props.name}</span> <span>{"▼"}</span></button>
+            <button onclick={onclick} class={classes!(if *clicked {"active"} else {"inactive"}, "specialization_hook")}><span class="track_name">{&props.name}</span> <span class="dropdown_triangle">{"▼"}</span></button>
             <div class={classes!(if *clicked {"active"} else {"inactive"},"specialization_text")}>
                 <div>
                     if props.sc.link.is_some() {
-                        <p class="info">{"Links: "}{props.sc.link}</p>
+                        <p class="info">{"Link: "}<a href={props.sc.link}>{props.sc.link}</a></p>
                     }
                     if props.sc.length_wk.is_some() {
                         <p class="info">{"Duration: "}{props.sc.length_wk}{" week"}{if props.sc.length_wk == Some(1.0) {""} else {"s"}}</p>
@@ -83,7 +83,7 @@ pub fn CampPage(props: &CampProps) -> Html {
             <strong>{"Info"}</strong>
             <ul class="info_list">
                 if let Some(tuition) = sc.tuition {
-                    <li class="info">{"Tuition: ~$"}<strong>{tuition}</strong></li>
+                    <li class="info">{"Tuition: ~$"}{tuition}</li>
                 }
                 if let Some(application_fee) = sc.application_fee {
                     <li class="info">{"Application fee: $"}{application_fee}</li>
@@ -95,13 +95,13 @@ pub fn CampPage(props: &CampProps) -> Html {
                     <li class="info">{"Organization: "}{organization}</li>
                 }
                 if let Some(deadline) = sc.deadline {
-                    <li class="info">{"Deadline is "}{deadline}</li>
+                    <li class="info">{"Deadline is "}<strong>{deadline}</strong></li>
                 }
                 if let Some(application_opens) = sc.application_opens {
                     <li class="info">{"Application opens on "}{application_opens}</li>
                 }
                 if let Some(length_wk) = sc.length_wk {
-                    <p class="info">{"Duration: "}{length_wk}{" week"}{if length_wk == 1.0 {""} else {"s"}}</p>
+                    <li class="info">{"Duration: "}<strong>{length_wk}{" week"}{if length_wk == 1.0 {""} else {"s"}}</strong></li>
                 }
                 if let Some(acceptance_rate) = sc.acceptance_rate {
                     <li class="info">{"Acceptance rate: "}{acceptance_rate}{"%"}</li>

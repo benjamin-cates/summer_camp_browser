@@ -179,7 +179,7 @@ pub fn get_all() -> impl Iterator<Item = SummerCamp> {
              to know more about Boston University. Are you up to the challenge?",
         ],
         deadline: Some("Rolling ASAP"),
-        identifier: "Boston University Challenge",
+        identifier: "Boston University Summer Challenge",
         length_wk: Some(2.0),
         requirements: vec![
             Requirement::GradeRange(10..=12),
