@@ -8,6 +8,7 @@ mod midwest;
 mod northwest;
 mod south;
 mod template;
+mod cross_campus;
 
 pub fn all_camps() -> Vec<SummerCamp> {
     // Temporary list
@@ -41,5 +42,6 @@ pub fn all_camps() -> Vec<SummerCamp> {
     out.extend(midwest::get());
     out.extend(northwest::get());
     out.extend(south::get());
+    out.extend(cross_campus::get());
     out
 }

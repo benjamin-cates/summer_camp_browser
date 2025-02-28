@@ -9,6 +9,7 @@ mod usc;
 mod uc_davis;
 mod berkeley;
 mod stanford;
+mod ucla;
 
 pub fn get() -> impl Iterator<Item=SummerCamp> {
     let mut vec: Vec<SummerCamp> = cosmos::get_cosmos().collect();
@@ -23,5 +24,7 @@ pub fn get() -> impl Iterator<Item=SummerCamp> {
     vec.push(stanford::get_humanities());
     vec.push(stanford::get_sumac());
     vec.push(stanford::get_summer_institutes());
+    vec.push(ucla::get_institutes());
+    vec.push(ucla::get_scip());
     vec.into_iter()
 }
